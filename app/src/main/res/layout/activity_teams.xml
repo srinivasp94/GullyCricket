@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ballandbat"
+    android:fitsSystemWindows="true"
+    tools:context="sample.ramya.com.exampleapp.TeamsActivity">
+
+    <View
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/rootview"
+       android:layout_below="@+id/rootview"
+       android:layout_toLeftOf="@+id/rootview"
+       android:layout_toRightOf="@+id/rootview"
+       android:alpha="0.99"
+       android:background="#965b5c5b" />
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+       android:padding="@dimen/_14sdp"
+       android:gravity="center"
+       android:orientation="vertical">
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="India-A"
+           android:id="@+id/edt_team_ind"
+           android:background="@drawable/crick_edittext"
+           android:padding="@dimen/_8sdp"
+           android:textColor="@color/black"
+           android:textColorHint="@color/black"
+           android:gravity="center"
+           android:inputType="textPersonName"
+           android:maxLines="1"/>
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:layout_marginTop="@dimen/_10sdp"
+           android:layout_marginBottom="@dimen/_10sdp"
+           android:textSize="@dimen/_45sdp"
+           android:textColor="#9e3c04"
+           android:text="VS"/>
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/edt_team_pak"
+           android:maxLines="1"
+           android:background="@drawable/crick_edittext"
+           android:padding="@dimen/_8sdp"
+           android:textColor="@color/black"
+           android:textColorHint="@color/black"
+           android:gravity="center"
+           android:inputType="textPersonName"
+           android:hint="India-B"/>
+   </LinearLayout>
+    <Button
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_submit_teams"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#206102"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/_35sdp"
+        android:typeface="sans"
+        android:text="Start game"/>
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</LinearLayout>-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgrcrickcoreapp"
+                android:alpha="0.9"
+    android:padding="@dimen/_4sdp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/norecordsfound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/textappearence"
+        android:gravity="center"
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/_1sdp"
+        android:text="Two players need to play...Click on Plus Below to enter openers Names "
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/_19sdp"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_team_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_team_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/icons_plusmathfilled" />
+
+</RelativeLayout>

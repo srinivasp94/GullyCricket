@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+              android:background="@drawable/bgrcrickcoreapp"
+              android:alpha="0.7"
+    android:orientation="vertical"
+    tools:context="sample.ramya.com.exampleapp.EnterScoresHere">
+
+<!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="388dp">
+-->
+
+        <sample.ramya.com.exampleapp.customviews.CustomTextview
+            android:id="@+id/txt_name_player1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:gravity="center"
+            android:text="Player Name"
+            android:textColor="@color/pureblack"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <sample.ramya.com.exampleapp.customviews.CustomTextview
+                android:id="@+id/txt_score_player1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="0"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20sdp" />
+
+            <sample.ramya.com.exampleapp.customviews.CustomTextview
+                android:id="@+id/txt_balls"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:gravity="start"
+                android:text="0"
+                android:textColor="@color/darklightblack"
+                android:textSize="@dimen/_14sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:weightSum="5">
+
+
+            <Button
+                android:id="@+id/btn_one_player1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:onClick="makeSingle"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/btn_two_player1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:onClick="makeDouble"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/btn_three_player1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:onClick="makeTriples"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/btn_four_player1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="hitFour"
+                android:text="FOUR" />
+
+            <Button
+                android:id="@+id/btn_six_player1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="hitSix"
+                android:text="six" />
+
+            <Button
+                android:id="@+id/btn_out_player1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="hitWickets"
+                android:text="out" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <sample.ramya.com.exampleapp.customviews.CustomTextview
+                android:id="@+id/tv_indetail_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:text="score in detail"
+                android:textSize="@dimen/_8sdp" />
+
+
+            <Button
+                android:id="@+id/btn_dotball"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="dotBall"
+                android:text="Dot Ball"
+                android:textColor="@color/textcolor" />
+
+            <Button
+                android:id="@+id/btn_wideball"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:onClick="wideBall"
+                android:text="Wide Ball"
+                android:textColor="@color/colorPrimary" />
+        </LinearLayout>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="@color/darklightblack"
+    android:layout_marginTop="@dimen/_15sdp"
+    android:layout_marginBottom="@dimen/_15sdp"/>
+
+    <sample.ramya.com.exampleapp.customviews.CustomTextview
+        android:id="@+id/txt_name_player2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:gravity="center"
+        android:text="Player Name"
+        android:textColor="@color/pureblack"
+        android:textSize="@dimen/_20sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <sample.ramya.com.exampleapp.customviews.CustomTextview
+            android:id="@+id/txt_score_player2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="0"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp" />
+
+        <sample.ramya.com.exampleapp.customviews.CustomTextview
+            android:id="@+id/txt_balls2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:gravity="start"
+            android:text="0"
+            android:textColor="@color/darklightblack"
+            android:textSize="@dimen/_14sdp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp"
+        android:weightSum="5">
+
+
+        <Button
+            android:id="@+id/btn_one_player2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:onClick="makeSingletwo"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btn_two_player2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:onClick="makeDoubletwo"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btn_three_player2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:onClick="makeTriplestwo"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btn_four_player2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="hitFourtwo"
+            android:text="FOUR" />
+
+        <Button
+            android:id="@+id/btn_six_player2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="hitSixtwo"
+            android:text="six" />
+
+        <Button
+            android:id="@+id/btn_out_player2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="hitWicketstwo"
+            android:text="out" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <sample.ramya.com.exampleapp.customviews.CustomTextview
+            android:id="@+id/tv_indetail_score2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_weight="1"
+            android:text="score in detail"
+            android:visibility="invisible"
+            android:textSize="@dimen/_8sdp" />
+
+
+        <Button
+            android:id="@+id/btn_dotball2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:onClick="dotBallTwo"
+            android:text="Dot Ball"
+            android:textColor="@color/textcolor" />
+
+        <Button
+            android:id="@+id/btn_wideball2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:onClick="wideBallTwo"
+            android:text="Wide Ball"
+            android:textColor="@color/colorPrimary" />
+    </LinearLayout>
+
+    <!--</LinearLayout>-->
+
+</LinearLayout>

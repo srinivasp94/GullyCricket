@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+
+        <sample.ramya.com.exampleapp.customviews.CustomTextview
+            android:id="@+id/tv_lable_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textColor="@color/textappearence"
+            android:textSize="@dimen/_13sdp" />
+
+        <!--<com.example.admin.gokuldas.customviews.ValueSelector
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/np"/>
+    -->
+        <sample.ramya.com.exampleapp.customviews.ValueSelector
+            android:id="@+id/vh_valueselector"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:gravity="end" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/darklightblack" />
+
+</LinearLayout>
